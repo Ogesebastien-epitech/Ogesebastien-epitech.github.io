@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h1>LANCE TOI FDP</h1> 
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="./text.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>Responsive Portfolio</title>
+  </head>
+  
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Portfolio</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#portfolio-section">Portfolio</a></li>
+          <li><a href="#contact-form">Contact</a></li>
+        </ul>      
+      </div>
+    </nav>
+
+ 
+      <section class="section" id="home">
+        <div class="section__container">
+          <div class="content">
+            <p class="subtitle">HELLO</p>
+            <h1 class="title">
+              I'm <span>Sébastien<br />a</span> Web Developer
+            </h1>
+            <p class="description">
+              I am currently a web development student at Epitech, passionate about creating web applications and coding. My academic background allowed me to acquire solid skills in programming, front-end and back-end development, as well as web design.
+            </p>
+            <div class="action__btns">
+              <button class="hire__me">
+                <a href="#contact-form">Hire Me</a>
+              </button>
+              <button class="portfolio">
+                <a href="#portfolio-section">Portfolio</a>
+              </button>
+            </div>
+          </div>
+          <div class="image">
+            <img src="./assets/seb.png" alt="profile" id="bitmoji" class="profile-image"/>
+          </div>
+        </div>
+      </section>
+    
+    
+
+    <section class="about-section" id="about-section">
+      <h1>School</h1>
+      <div class="timeline">
+          <div class="year">
+              <h2>2023</h2>
+              <p>Epitech: Software architect and application developer.</p>
+          </div>
+          <div class="year">
+              <h2>2021-2022</h2>
+              <p>CNAM : Professional license Law Economics Management</p>
+          </div>
+          <div class="year">
+              <h2>2018-2021</h2>
+              <p>IESA : Management of commercial units</p>
+          </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <h1>Work expérience</h1>
+      <div class="timeline">
+          <div class="year">
+              <h2>May 2023 - September 2023</h2>
+              <p>BMW Group France : Telephone advisors </p>
+          </div>
+          <div class="year">
+              <h2>2020-2022</h2>
+              <p>Norauto : Assistant manager</p>
+          </div>
+          <div class="year">
+              <h2>2018-2020</h2>
+              <p>Norauto : Seller</p>
+          </div>
+      </div>
+    </section>
+    
+    <section class="portfolio-section" id="portfolio-section">
+        <h1>Portfolio</h1>
+        <div class="project">
+              <img src="./assets/projet1.jpg" alt="Projet 1">
+              <h2>Project 1</h2>
+              <p>Travel.</p>
+          </div>
+        </div>
+        <button class="button" onclick="window.location.href='https://github.com/OGESebastien'">See the project</button>
+      </div>
+        <div class="project">
+              <img src="./assets/projet2.jpg" alt="Projet 2">
+              <h2>Project 2</h2>
+              <p>Game mario.</p>
+          </div>
+        </div>
+        <button class="button" onclick="window.location.href='https://github.com/OGESebastien'">See the project</button>
+      </div>
+        <div class="project">
+            <img src="./assets/projet3.jpg" alt="Projet 3">
+            <h2>Projet 3</h2>
+            <p>Hangmann.</p>
+        </div>
+      </div>
+      <button class="button" onclick="window.location.href='https://github.com/OGESebastien'">See the project</button>
+      </div>
+    </section>
+
+
+    <section class="contact-form" id="contact-form">
+        <h1>Contact me</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+  
+      
+    <footer class="footer">
+          <div class="social-links">
+              <a href="https://www.linkedin.com/in/sebastienoge" target="_blank" class="linkedin">LinkedIn</a>
+              <a href="https://github.com/OGESebastien" target="_blank" class="github">GitHub</a>
+          </div>
+          <p>&copy; 2023 Oge Sébastien</p>
+    </footer>
+
+    <script>
+      const menuLinks = document.querySelectorAll('nav ul li a');
+      const checkbox = document.getElementById('check');
+      menuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          checkbox.checked = false;
+        });
+      });
+    </script>
+    
+  </body>
 </html>
